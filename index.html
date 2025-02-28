@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classificação de Ações de Manutenção</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Upload de Planilha</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Classificação de Ações de Manutenção</h1>
-        <form action="/upload" method="post" enctype="multipart/form-data">
+        <h1>Upload de Planilha</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
             <input type="file" name="file" accept=".xlsx" required>
-            <br>
-            <button type="submit">Enviar Planilha</button>
+            <button type="submit">Enviar</button>
         </form>
-        {% if message %}
-            <div class="message">{{ message }}</div>
-        {% endif %}
     </div>
 </body>
 </html>
